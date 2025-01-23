@@ -2,11 +2,12 @@ Project Overview
 A Spring Boot microservice for converting decimal numbers to Roman numerals.
 
 Conversion reference: https://en.wikipedia.org/wiki/Roman_numerals
-Prerequisites
+
+# Prerequisites
 1. Java 17
 2. Gradle 8.x
 
-Building the Project
+# Building the Project
 # Clean and build the project
 ./gradlew clean build
 
