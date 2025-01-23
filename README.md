@@ -1,13 +1,16 @@
-Project Overview
+# Roman Numeral Converter
+
+## Project Overview
 A Spring Boot microservice for converting decimal numbers to Roman numerals.
 
 Conversion reference: https://en.wikipedia.org/wiki/Roman_numerals
 
-# Prerequisites
-1. Java 17
-2. Gradle 8.x
+## Prerequisites
+- Java 17
+- Gradle 8.x
 
-# Building the Project
+## Building the Project
+```bash
 # Clean and build the project
 ./gradlew clean build
 
@@ -16,62 +19,59 @@ Conversion reference: https://en.wikipedia.org/wiki/Roman_numerals
 
 # Generate test coverage report
 ./gradlew jacocoTestReport
+```
 
-Running the Application
+## Running the Application
+```bash
 # Run the application
 ./gradlew bootRun
 
 # Access the endpoint
-http://localhost:8080/romannumeral?query=42
+# http://localhost:8080/romannumeral?query=42
+```
 
-# Engineering Methodology
+## Engineering Methodology
+- Test-Driven Development (TDD)
+- Modular design with separation of concerns
+- Comprehensive unit and integration testing
+- Continuous integration via JaCoCo test coverage
 
-1. Test-Driven Development (TDD)
-2. Modular design with separation of concerns
-3. Comprehensive unit and integration testing
-4. Continuous integration via JaCoCo test coverage
+### Testing Strategies
+- JUnit 5 for unit testing
+- Mockito for mocking dependencies
+- 80% test coverage requirement
+- Parameterized tests for input variations
 
-# Testing Strategies
-
-1. JUnit 5 for unit testing
-2. Mockito for mocking dependencies
-3. 80% test coverage requirement
-4. Parameterized tests for input variations
-
-# Package Layout
+## Package Layout
+```
 com.example.romannumeral
-
 ├── constants        # Constant values and configurations
-
 ├── controller       # HTTP request handling
-
 ├── model            # Data transfer objects
-
 ├── service          # Business logic interfaces/implementations
-
 └── RomanNumeralApplication.java  # Application entry point
+```
 
-# Dependencies
+## Dependencies
+- Spring Boot Web
+- Project Lombok
+- JUnit Jupiter
+- Mockito
+- Jackson Databind
 
-1. Spring Boot Web
-2. Project Lombok
-3. JUnit Jupiter
-4. Mockito
-5. Jackson Databind
+## Logging
+- SLF4J with logback
+- Configurable logging levels
+- Structured console output
 
-# Logging
+## Performance Considerations
+- O(1) time complexity for Roman numeral conversion
+- Minimal memory allocation
+- Efficient use of Java Stream and Collection APIs
 
-1. SLF4J with logback
-2. Configurable logging levels
-3. Structured console output
+## Limitations
+- Supports integers between 1-3999
+- ASCII Roman numeral representation only
 
-# Performance Considerations
-
-1. O(1) time complexity for Roman numeral conversion
-2. Minimal memory allocation
-3. Efficient use of Java Stream and Collection APIs
-
-# Limitations
-
-1. Supports integers between 1-3999
-2. ASCII Roman numeral representation only
+## License
+MIT License
